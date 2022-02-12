@@ -50,6 +50,7 @@ header .container {
 }
 
 .header__menu {
+    align-items: center;
     display: flex;
 }
 
@@ -72,11 +73,13 @@ header .container {
 }
 
 .header__social {
+    align-items: center;
     display: flex;
 }
 
 .social {
     background-repeat: no-repeat;
+    background-position: center center;
     display: block;
     font-size: 0;
     height: 1.7rem;
@@ -89,7 +92,6 @@ header .container {
 
 .social-twitter {
     background-image: url('../img/twitter.svg');
-    height: 1.4rem;
 }
 
 .social-instagram {
