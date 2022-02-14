@@ -44,8 +44,10 @@ h1 {
 }
 
 .container {
+  box-sizing: content-box;
   margin: 0 auto;
-  width: 113.5rem;
+  max-width: 113.5rem;
+  padding: 0 1rem;
 }
 
 header {
@@ -54,6 +56,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   top: 6.4rem;
+  width: 100%;
 }
 
 header .container {
@@ -117,13 +120,7 @@ header .container {
 main {
   background: #831618 url(../img/background.jpg) no-repeat center top / cover;
   flex: auto;
-  padding-top: 18.7rem;
-  padding-bottom: 10.4rem;
-}
-
-main .container {
-  display: flex;
-  flex-direction: column;
+  padding: 18.7rem 0 10.4rem;
 }
 
 .main-content__container {
@@ -133,8 +130,34 @@ main .container {
   margin-bottom: 8.8rem;
 }
 
+@media screen and (max-width: 480px) {
+  .main-content__container {
+    flex-direction: column;
+  }
+}
+
 .main-content {
+  display: flex;
+  flex-direction: column;
   margin-right: 31.5rem;
+}
+
+@media screen and (max-width: 765px) {
+  .main-content {
+    margin-right: 15rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-content {
+    margin-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    margin-right: 1rem;
+  }
 }
 
 .main-rating {
@@ -189,11 +212,16 @@ main .container {
 
 .main-button__play {
   background: #151515 url('../img/elements/play.svg') no-repeat 3.8rem center;
-  border: none;
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  -webkit-background-clip: padding-box; /* for Safari */
+  /* border: none; */
+  border: 1.6rem solid rgba(21, 21, 21, 0.5);;
   border-radius: 50%;
-  box-shadow: 0 0 0 1.6rem rgba(21, 21, 21, 0.5);
+  box-sizing: content-box;
   cursor: pointer;
+  flex-shrink: 0;
   height: 10rem;
+  /* outline: rgba(21, 21, 21, 0.5) solid 1.6rem; */
   text-indent: -9999px;
   width: 10rem;
 }
@@ -213,7 +241,7 @@ main .container {
 .main-slider__container {  
   align-items: center;
   display: flex;
-  width: 41.5rem;
+  max-width: 41.5rem;
 }
 
 .main-slider__slide {
@@ -258,6 +286,12 @@ main .container {
 
 .main-slider__arrow:active {
   filter: opacity(0.7);
+}
+
+@media screen and (max-width: 480px) {
+  .main-slider__arrow {
+    display: none;
+  }
 }
 
 footer {
