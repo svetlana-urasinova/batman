@@ -1,0 +1,117 @@
+@media (max-width: 48em) {
+  html {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  header {
+    opacity: 0;
+    right: 0;
+    top: 0;
+    transition: opacity ease-in 0.2s;
+    width: fit-content;
+  }
+
+  ._open ~ header {
+    opacity: 1;
+  }
+
+  header .container {
+    background-color: #151515;
+    flex-direction: column;
+    width: 31.2rem;
+  }
+
+  .header-logo {
+    margin-bottom: 3.5rem;
+    margin-right: 0;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    order: 1;
+  }
+
+  .header-nav a:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.7rem;
+  }
+
+  .header-social {
+    margin-left: 0;
+    margin-bottom: 2.2rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  main {
+      padding: 19.6rem 0 4.8rem;
+  }
+
+  .main-rating {
+    margin-bottom: 1.2rem;
+  }
+
+  .main-rating__title {
+      margin-bottom: 2rem;
+  }
+
+  .main-play {
+      display: none;
+  }
+
+  .main-description {
+      margin-bottom: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 30em) {
+    html {
+        font-size: 8px;
+    }
+
+  .container {
+    max-width: 41rem;
+  }
+
+  main {
+    background-position: -65rem top;
+    background-size: cover;
+  }
+
+  .main-content__container {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 5.5rem;
+  }
+
+  .main-slider__container {
+    max-width: 16.4rem;
+  }
+
+  .main-button__buy-tickets {
+    padding: 2.8rem 9rem;
+  }
+
+  .main-slider__arrow {
+    display: none;
+  }
+
+  footer .container {
+      flex-direction: column;
+  }
+
+  footer .footer-copy {
+      margin-bottom: 1rem;
+  }
+
+  footer .footer-menu {
+      justify-content: space-between;
+  }
+}

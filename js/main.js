@@ -12,3 +12,8 @@ const swiper = new Swiper('.main-slider', {
         }
     },
 });
+
+const menuIcon = document.querySelector('.menu-icon');
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('_open');
+});
