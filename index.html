@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Batman</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__menu">
-          <div class="header__logo">
+        <div class="header-menu">
+          <div class="header-logo">
             <img src="img/logo.svg" alt="Site logo" />
           </div>
-          <nav class="header__nav">
+          <nav class="header-nav">
             <a href="#">Описание</a>
             <a href="#">Трейлер</a>
             <a href="#">Отзывы</a>
           </nav>
         </div>
-        <div class="header__social">
+        <div class="header-social">
           <a class="social social-twitter" href="#">Twitter</a>
           <a class="social social-instagram" href="#">Instagram</a>
           <a class="social social-facebook" href="#">Facebook</a>
@@ -30,39 +34,76 @@
     </header>
     <main>
       <div class="container">
-        <h1>Бэтмен</h1>
-        <div class="main__rating">
-          <div class="main__rating-title">2022, боевик, триллер</div>
-          <div class="main__rating-wrapper">
-            <ul class="main__rating-stars">
-              <li class="star-active"></li>
-              <li class="star-active"></li>
-              <li class="star-active"></li>
-              <li class="star-active"></li>
-              <li class="star-active"></li>
-              <li class="star-active"></li>
-              <li class="star-active"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <div class="main__rating-number">7/10</div>
+        <div class="main-content__container">
+          <div class="main-content">
+            <h1>Бэтмен</h1>
+            <div class="main-rating">
+              <div class="main-rating__title">2022, боевик, триллер</div>
+              <div class="main-rating__wrapper">
+                <ul class="main-rating__stars">
+                  <li class="star-active"></li>
+                  <li class="star-active"></li>
+                  <li class="star-active"></li>
+                  <li class="star-active"></li>
+                  <li class="star-active"></li>
+                  <li class="star-active"></li>
+                  <li class="star-active"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div class="main-rating__number">7/10</div>
+              </div>
+            </div>
+            <div class="main-description">
+              После двух лет поисков правосудия на улицах Готэма для своих
+              сограждан Бэтмен становится олицетворением беспощадного возмездия.
+              Когда в городе происходит серия жестоких нападений на
+              представителей элиты, загадочные улики приводят Брюса Уэйна в
+              самые темные закоулки преступного мира. Теперь под прицелом
+              оказывается сам Бэтмен.
+            </div>
+            <a href="#" class="main-button__buy-tickets">Купить билеты </a>
           </div>
+          <button class="main-button__play">Play</button>
         </div>
-        <div class="main__description">
-          После двух лет поисков правосудия на улицах Готэма для своих сограждан
-          Бэтмен становится олицетворением беспощадного возмездия. Когда в
-          городе происходит серия жестоких нападений на представителей элиты,
-          загадочные улики приводят Брюса Уэйна в самые темные закоулки
-          преступного мира. Теперь под прицелом оказывается сам Бэтмен.
+        <div class="main-slider__container">
+          <div class="main-slider swiper">
+            <div class="swiper-wrapper">
+              <div class="main-slider__slide swiper-slide">
+                <img src="img/slider/slide-1.png" alt="Трейлер #1" />
+                <span>Трейлер #1</span>
+              </div>
+              <div class="main-slider__slide swiper-slide">
+                <img src="img/slider/slide-2.png" alt="Трейлер #2" />
+                <span>Трейлер #2</span>
+              </div>
+              <div class="main-slider__slide swiper-slide">
+                <img src="img/slider/slide-1.png" alt="Трейлер #3" />
+                <span>Трейлер #3</span>
+              </div>
+              <div class="main-slider__slide swiper-slide">
+                <img src="img/slider/slide-2.png" alt="Трейлер #4" />
+                <span>Трейлер #4</span>
+              </div>
+              <div class="main-slider__slide swiper-slide">
+                <img src="img/slider/slide-1.png" alt="Трейлер #5" />
+                <span>Трейлер #5</span>
+              </div>
+              <div class="main-slider__slide swiper-slide">
+                <img src="img/slider/slide-2.png" alt="Трейлер #6" />
+                <span>Трейлер #6</span>
+              </div>
+            </div>
+          </div>
+          <button class="main-slider__arrow">&rarr;</button>
         </div>
-        <a href="#" class="main__buy-tickets"> Купить билеты </a>
       </div>
     </main>
     <footer>
       <div class="container">
-        <div class="footer__copy">© 2022 The Batman. All right reserved.</div>
-        <ul class="footer__menu">
+        <div class="footer-copy">© 2022 The Batman. All right reserved.</div>
+        <ul class="footer-menu">
           <li>
             <a href="#"> Privacy Policy </a>
           </li>
@@ -75,5 +116,7 @@
         </ul>
       </div>
     </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

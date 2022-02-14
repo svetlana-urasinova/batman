@@ -61,30 +61,30 @@ header .container {
   justify-content: space-between;
 }
 
-.header__menu {
+.header-menu {
   align-items: center;
   display: flex;
 }
 
-.header__logo {
+.header-logo {
   margin-right: 3.9rem;
 }
 
-.header__logo img {
+.header-logo img {
   display: block;
   height: 2.8rem;
   width: 7.9rem;
 }
 
-.header__nav a {
+.header-nav a {
   text-decoration: none;
 }
 
-.header__nav a:not(:last-child) {
+.header-nav a:not(:last-child) {
   margin-right: 2.4rem;
 }
 
-.header__social {
+.header-social {
   align-items: center;
   display: flex;
 }
@@ -103,21 +103,22 @@ header .container {
 }
 
 .social-twitter {
-  background-image: url("../img/twitter.svg");
+  background-image: url("../img/social/twitter.svg");
 }
 
 .social-instagram {
-  background-image: url("../img/instagram.svg");
+  background-image: url("../img/social/instagram.svg");
 }
 
 .social-facebook {
-  background-image: url("../img/facebook.svg");
+  background-image: url("../img/social/facebook.svg");
 }
 
 main {
   background: #831618 url(../img/background.jpg) no-repeat center top / cover;
   flex: auto;
   padding-top: 18.7rem;
+  padding-bottom: 10.4rem;
 }
 
 main .container {
@@ -125,21 +126,32 @@ main .container {
   flex-direction: column;
 }
 
-.main__rating {
+.main-content__container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8.8rem;
+}
+
+.main-content {
+  margin-right: 31.5rem;
+}
+
+.main-rating {
   margin-bottom: 1rem;
   order: -1;
 }
 
-.main__rating-title {
+.main-rating__title {
   margin-bottom: 1.6rem;
 }
 
-.main__rating-wrapper {
+.main-rating__wrapper {
   align-items: center;
   display: flex;
 }
 
-.main__rating-stars {
+.main-rating__stars {
   display: flex;
   list-style: none;
   margin: 0;
@@ -147,8 +159,8 @@ main .container {
   padding: 0;
 }
 
-.main__rating-stars li {
-  background: url("../img/star-empty.svg") no-repeat center center / 1.2rem
+.main-rating__stars li {
+  background: url("../img/elements/star-empty.svg") no-repeat center center / 1.2rem
     1.2rem;
   cursor: pointer;
   flex-shrink: 0;
@@ -156,26 +168,37 @@ main .container {
   width: 1.2rem;
 }
 
-.main__rating-stars li.star-active {
-  background-image: url("../img/star.svg");
+.main-rating__stars li.star-active {
+  background-image: url("../img/elements/star.svg");
 }
 
-.main__rating-stars li:not(:last-child) {
+.main-rating__stars li:not(:last-child) {
   margin-right: 0.4rem;
 }
 
-.main__rating-number {
+.main-rating__number {
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
 
-.main__description {
+.main-description {
   line-height: 2.1rem;
   margin-bottom: 4.1rem;
   max-width: 52.8rem;
 }
 
-.main__buy-tickets {
+.main-button__play {
+  background: #151515 url('../img/elements/play.svg') no-repeat 3.8rem center;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.6rem rgba(21, 21, 21, 0.5);
+  cursor: pointer;
+  height: 10rem;
+  text-indent: -9999px;
+  width: 10rem;
+}
+
+.main-button__buy-tickets {
   background-color: #151515;
   border-radius: 0.8rem;
   display: block;
@@ -185,6 +208,56 @@ main .container {
   padding: 2.2rem 7.2rem;
   text-decoration: none;
   width: fit-content;
+}
+
+.main-slider__container {  
+  align-items: center;
+  display: flex;
+  width: 41.5rem;
+}
+
+.main-slider__slide {
+  border-radius: 0.8rem;
+  height: 10.5rem;
+  overflow: hidden;
+  width: 16.4rem;
+}
+
+.main-slider__slide img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.main-slider__slide span {
+  bottom: 0.6rem;
+  color: white;
+  font-size: 1rem;
+  left: 1.2rem;
+  line-height: 1.2rem;
+  position: absolute;
+  transform: translate(0, 0);
+  z-index: 10;
+}
+
+.main-slider__arrow {
+  background: transparent url('../img/elements/slider-arrow.svg') no-repeat center center;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 2.2rem;
+  margin-left: 2.8rem;
+  outline: none;
+  text-indent: -9999px;
+  width: 3.2rem;
+}
+
+.main-slider__arrow:hover {
+  filter: brightness(1.7);
+}
+
+.main-slider__arrow:active {
+  filter: opacity(0.7);
 }
 
 footer {
@@ -200,17 +273,17 @@ footer .container {
   padding: 2rem 0;
 }
 
-.footer__menu {
+.footer-menu {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.footer__menu a {
+.footer-menu a {
   text-decoration: none;
 }
 
-.footer__menu li:not(:last-child) a {
+.footer-menu li:not(:last-child) a {
   margin-right: 2.5rem;
 }
