@@ -264,10 +264,7 @@ main {
 .main-button__play {
   background: #151515 url("../img/elements/play.svg") no-repeat 3.54rem center /
     3.54rem 4rem;
-  /* background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-  /* -webkit-background-clip: padding-box; for Safari */
   border: none;
-  /* border: 1.6rem solid rgba(21, 21, 21, 0.5);; */
   border-radius: 50%;
   cursor: pointer;
   flex-shrink: 0;
@@ -278,6 +275,10 @@ main {
   position: relative;
   text-indent: -9999px;
   width: 10rem;
+}
+
+.main-button__play:active, .main-button__play:focus {
+  outline: rgba(21, 21, 21, 0.5) solid 1.6rem;
 }
 
 .main-button__buy-tickets {
